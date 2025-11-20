@@ -1,0 +1,46 @@
+<!-- ...existing code... -->
+<!-- plantilla del componente: SIN <html> <head> <body> -->
+<!-- HEADER -->
+<header class="header">
+  <div class="container">
+    <a href="#" class="logo">
+      <i class="fas fa-microchip"></i>
+      TechCatálogo
+    </a>
+  <nav>
+  <ul class="nav-links">
+    <li><a routerLink="/principal" routerLinkActive="active">Inicio</a></li>
+    <li><a routerLink="/productos" routerLinkActive="active">Productos</a></li>
+    <li><a routerLink="/ofertas" routerLinkActive="active">Ofertas</a></li>
+    <li><a routerLink="/marcas" routerLinkActive="active">Marcas</a></li>
+    <li><a routerLink="/contacto" routerLinkActive="active">Contacto</a></li>
+  </ul>
+</nav>
+    <div class="header-icons">
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Buscar productos..." />
+      </div>
+      <button class="icon-btn"><i class="far fa-heart"></i></button>
+      <button class="icon-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">3</span></button>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</header>
+
+<main style="padding: 3rem 1rem; text-align:center;">
+  <h1>Tu Catálogo de Productos Aquí</h1>
+  <p>Desplázate para ver cómo se ve el header fijo al hacer scroll</p>
+  <router-outlet></router-outlet>
+
+
+
+
+  <footer>
+
+    <div class="footer-content text-center p-3 bg-dark text-white">
+      GRACIAS POR VISITAR NUESTRA PÁGINA &copy; 2024 TechCatálogo
+    </div>
+  </footer>
+</main>
+

@@ -1,0 +1,37 @@
+<div class="productos-grid">
+  <div class="producto-card" *ngFor="let p of productos">
+
+    <!-- Imagen (placeholder si no hay) -->
+    <div class="card-imagen">
+      <img [src]="'https://www.lacuracao.pe/media/catalog/product/h/v/hvtw967ne_1_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700' + (p.nombre | slice:0:10)"
+           [alt]="p.nombre" />
+    </div>
+
+    <!-- Contenido -->
+    <div class="card-body">
+      <h3 class="card-titulo">{{ p.nombre }}</h3>
+
+      <div class="card-info">
+        <p class="precio">S/.{{ p.precio | number:'1.0-2' }}</p>
+        <p class="stock">
+          <strong>Stock:</strong> {{ p.cantidad }} unidades
+        </p>
+      </div>
+
+      <p class="descripcion">{{ p.descripcion }}</p>
+
+      <div class="etiquetas">
+        <span class="etiqueta marca">
+          <i class="fas fa-tag"></i>
+          Nombre Marca: {{ p.nombre || 'N/A' }}
+        </span>
+        <span class="etiqueta categoria">
+          <i class="fas fa-folder"></i>
+          Nombre categoria: {{ p.nombre || 'N/A' }}
+        </span>
+      </div>
+
+      <button class="btn-accion">Ver Detalle</button>
+    </div>
+  </div>
+</div>
